@@ -17,7 +17,6 @@ class Card:
         return f'{letter}{self.number}'
 
     @classmethod
-
     def load(cls, text: str):
         """создает карту из строки вида 'y8' и возвращает её """
         #text = 'y8'
