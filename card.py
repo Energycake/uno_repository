@@ -2,12 +2,14 @@ class Card:
     colors=('red','green','blue','yellow')
     numbers=list(range(10))+ list (range(1, 10))
     dcolors={color[0]: color for color in colors}
+
     def __init__(self, color: str, number: int):
         self.color=color
         self.number=number
 
     def __eq__(self, other):
-        # TODO заглушка
+        if
+            self.color == other.color or self.number == self.number:
         return True
 
     def __repr__(self):
@@ -15,6 +17,7 @@ class Card:
         return f'{letter}{self.number}'
 
     @classmethod
+
     def load(cls, text: str):
         """создает карту из строки вида 'y8' и возвращает её """
         #text = 'y8'
@@ -29,7 +32,9 @@ class Card:
             return True
         else:
             return self.color == other.color or self.number == other.number
+
     @staticmethod
+
     def all_cards():
         """Возвращает все карты
         :param colors:
