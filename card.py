@@ -2,6 +2,7 @@ class Card:
     colors=('red','green','blue','yellow')
     numbers=list(range(10))+ list (range(1, 10))
     dcolors={color[0]: color for color in colors}
+    
     def __init__(self, color: str, number: int):
         self.color=color
         self.number=number
@@ -29,6 +30,7 @@ class Card:
             return True
         else:
             return self.color == other.color or self.number == other.number
+   
     @staticmethod
     def all_cards():
         """Возвращает все карты
