@@ -9,6 +9,9 @@ class Card:
 
     def __eq__(self, other):
         # TODO заглушка
+           """if
+            self.color == other.color or self.number == self.number:"""
+        return True
         return True
 
     def __repr__(self):
