@@ -1,3 +1,6 @@
+import random
+from scr.card import Card
+
 class Deck:
     """Колода карт уно"""
     def __init__(self, cards=None):
@@ -6,11 +9,11 @@ class Deck:
         #cards = cards or []
     self.cards = cards.copy()
     def __repr__(self):
-    s = ' '.join(map(str, self.cards))
-    return s
+        s = ''.join(map(str, self.cards))
+        return s
 
     def save(self):
-        return repr(self)
+        return repr (self)
 
     @classmethod
     def load(cls, text:str):

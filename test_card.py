@@ -10,8 +10,8 @@ def test_init():
     assert str(c)== 'y8'
 
 def test_create_from_str():
-    c= Card.create('b5')
-    assert c.cololr == 'blue'
+    c= Card.load('b5')
+    assert c.color == 'blue'
     assert c.number == 5
     
 def test_playable():
