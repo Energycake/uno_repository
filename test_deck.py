@@ -12,7 +12,6 @@ def test_create():
 def test_repr():
     deck = Deck(cards = card_list)
     assert repr(deck) == 'b2 y4 r7'
-
     
 def test_load():
     deck = Deck.load('b2 y4 r7')

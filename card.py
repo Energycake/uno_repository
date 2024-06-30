@@ -12,7 +12,6 @@ class Card:
           return self.color == other.color or self.number == other.number
       else:
           return False
-
   def __repr__(self):
       letter=self.color[0]
       return f'{letter}{self.number}'

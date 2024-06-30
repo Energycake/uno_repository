@@ -20,7 +20,6 @@ def test_playable():
     c3 = Card('blue', 8)
     c4 = Card('yellow', 8)
     c5 = Card('green', 4)
-
     assert c1.playable(c2)
     assert c1.playable(c3)
     assert c1.playable(c4)
