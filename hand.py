@@ -15,7 +15,6 @@ class Hand:
         point =
 
     def remove_card(self, point):
-
         self.cards_hand_text.pop(point)
         return self.cards_hand.pop(point)
 
