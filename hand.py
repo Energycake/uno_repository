@@ -7,6 +7,7 @@ class Hand:
     def current_cards(self):
         for i in range (len(self.cards_hand)):
             print(f'{i+1}.{self.cards_hand[i]}')
+            
     def add_card(self,card):
         self.cards_hand.append(str(card))
 
