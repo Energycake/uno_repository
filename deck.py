@@ -32,6 +32,7 @@ class Deck:
         """Берем карту из колоды (ее там больше нет) и возвращаем ее"""
         c =self.cards.pop(0)
         return c
+   
     def shuffle(self):
         """перемешиваем колоду"""
         random.shuffle(self.cards)
