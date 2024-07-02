@@ -4,7 +4,7 @@ class Deck:
         if cards is None:
             cards=[]
         #cards = cards or []
-    self.cards = cards.copy()
+        self.cards = cards.copy()
 
     def __repr__(self):
     s = ' '.join(map(str, self.cards))
