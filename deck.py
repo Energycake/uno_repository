@@ -1,19 +1,17 @@
-import random
-from scr.card import Card
-
 class Deck:
     """Колода карт уно"""
     def __init__(self, cards=None):
         if cards is None:
             cards=[]
         #cards = cards or []
-    self.cards = cards.copy()
+        self.cards = cards.copy()
+
     def __repr__(self):
-        s = ''.join(map(str, self.cards))
-        return s
+    s = ' '.join(map(str, self.cards))
+    return s
 
     def save(self):
-        return repr (self)
+        return repr(self)
 
     @classmethod
     def load(cls, text:str):
@@ -31,10 +29,9 @@ class Deck:
         return deck
 
     def draw_card(self):
-        """Берем карту из колоды (ее там больше нет), возвращаем ее"""
+        """Берем карту из колоды (ее там больше нет) и возвращаем ее"""
         c =self.cards.pop(0)
         return c
-        
     def shuffle(self):
         """перемешиваем колоду"""
         random.shuffle(self.cards)
