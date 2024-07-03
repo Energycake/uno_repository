@@ -13,12 +13,12 @@ def test_repr():
 
 def test_add():
     lst = Hand()
-    c = Card('r', 6)
-    lst.add(c)
-    c = Card('g', 4)
-    lst.add(c)
-    c = Card('y', 2)
-    lst.add(c) 
+    c1 = Card('r', 6)
+    lst.add(c1)
+    c2 = Card('g', 4)
+    lst.add(c2)
+    c3 = Card('y', 2)
+    lst.add(c3) 
 
     assert lst.cards[0] == Card('r', 6)
     assert lst.cards[1] == Card('g', 4)
