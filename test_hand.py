@@ -24,3 +24,13 @@ def test_add():
     assert lst.cards_hand[0] == Card('r', 6)
     assert lst.cards_hand[1] == Card('g', 4)
     assert lst.cards_hand[2] == Card('y', 2)
+
+def test_remove():
+    lst = Hand()
+    c1 = Card('r', 6)
+    lst.add_card(c1)
+    c2 = Card('g', 4)
+    lst.add_card(c2)
+    c3 = Card('y', 2)
+    lst.add_card(c3)
+    lst.remove_card(c3)

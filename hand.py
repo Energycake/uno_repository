@@ -1,7 +1,11 @@
+from card import Card
+
 
 class Hand:
-    def __init__(self):
-        self.cards_hand = []
+    def __init__(self, cards=None):
+        if cards is None:
+            cards=[]
+        self.cards_hand = cards.copy()
 
 
     def current_cards(self):
@@ -17,7 +21,16 @@ class Hand:
     def __eq__(self, other):
         return self.cards_hand == other.cards
 
-    
+    @classmethod
+    def load_card(cls, text: str):
+            text = 'b2 y4 r7'
+            words = text.split()  # ['b2','y4','r7']
+            cards = []
+            for w in words:
+                c = Card.load(w)
+                cards.append(c)
+            hand = Hand(cards=cards)
+            return hand
     def remove_card(self, point):
         return self.cards_hand.remove(point)
 
