@@ -7,11 +7,6 @@ class Hand:
             cards=[]
         self.cards_hand = cards.copy()
 
-
-    def current_cards(self):
-        for i in range (len(self.cards_hand)):
-            print(f'{i+1}.{self.cards_hand[i]}')
-
     def __repr__(self):
         s = ' '.join(map(str, self.cards_hand))
         return s
@@ -19,11 +14,12 @@ class Hand:
         self.cards_hand.append(card)
 
     def __eq__(self, other):
-        return self.cards_hand == other.cards
+        print(self.cards_hand, other.cards_hand)
+        print(self.cards_hand == other.cards_hand)
+        return self.cards_hand == other.cards_hand
 
     @classmethod
     def load_card(cls, text: str):
-            text = 'b2 y4 r7'
             words = text.split()  # ['b2','y4','r7']
             cards = []
             for w in words:
@@ -31,6 +27,7 @@ class Hand:
                 cards.append(c)
             hand = Hand(cards=cards)
             return hand
+
     def remove_card(self, point):
         return self.cards_hand.remove(point)
 
