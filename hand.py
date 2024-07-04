@@ -11,9 +11,11 @@ class Hand:
     def add_card(self,card):
         self.cards_hand.append(card)
         self.cards_hand_text.append(str(card))
-    def select_card(self, point):
-        point =
 
+    def __eq__(self, other):
+        return self.cards == other.cards
+
+    
     def remove_card(self, point):
         self.cards_hand_text.pop(point)
         return self.cards_hand.pop(point)
