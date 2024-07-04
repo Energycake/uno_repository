@@ -7,9 +7,12 @@ class Hand:
     def current_cards(self):
         for i in range (len(self.cards_hand)):
             print(f'{i+1}.{self.cards_hand[i]}')
+
+    def __repr__(self):
+        s = ' '.join(map(str, self.cards_hand))
+        return s
     def add_card(self,card):
         self.cards_hand.append(card)
-        self.cards_hand.append(str(card))
 
     def __eq__(self, other):
         return self.cards_hand == other.cards
