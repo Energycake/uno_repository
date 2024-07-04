@@ -4,15 +4,13 @@ class Card:
     dcolors={color[0]: color for color in colors}
 
     def __init__(self, color: str, number: int):
-         if color not in Card.dcolors.keys() and color not in Card.dcolors.values() or \
-            number not in Card.numbers:
-            raise CardException()
-        self.color=color
-        self.number=number
+         if color not in Card.dcolors.keys() and color not in Card.dcolors.values() or  number not in Card.numbers:
+                raise CardException()
+            self.color=color
+            self.number=number
 
     def __eq__(self, other):
-        if
-            self.color == other.color or self.number == self.number:
+        if  self.color == other.color or self.number == self.number:
         return True
 
     def __repr__(self):
@@ -43,7 +41,7 @@ class Card:
         :param numbers:"""
          if colors is None:
             colors = Card.colors
-        if numbers is None:
+         if numbers is None:
             numbers = Card.numbers
 
 
