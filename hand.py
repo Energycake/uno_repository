@@ -12,7 +12,7 @@ class Hand:
         self.cards_hand.append(str(card))
 
     def remove_card(self, card):
-        return self.cards_hand.pop(card - 1)
+        return self.cards_hand.remove(card)
 
     def one_card(self):
         if len(self.cards_hand) == 1:
