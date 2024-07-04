@@ -4,6 +4,9 @@ class Card:
     dcolors={color[0]: color for color in colors}
 
     def __init__(self, color: str, number: int):
+         if color not in Card.dcolors.keys() and color not in Card.dcolors.values() or \
+            number not in Card.numbers:
+            raise CardException()
         self.color=color
         self.number=number
 
@@ -38,6 +41,10 @@ class Card:
         """Возвращает все карты
         :param colors:
         :param numbers:"""
+         if colors is None:
+            colors = Card.colors
+        if numbers is None:
+            numbers = Card.numbers
 
 
         cards = []
