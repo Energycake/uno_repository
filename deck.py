@@ -1,3 +1,8 @@
+import random
+
+from card import Card
+
+
 class Deck:
     """Колода карт уно"""
     def __init__(self, cards=None):
@@ -7,8 +12,8 @@ class Deck:
         self.cards = cards.copy()
 
     def __repr__(self):
-    s = ' '.join(map(str, self.cards))
-    return s
+        s = ' '.join(map(str, self.cards))
+        return s
 
     def save(self):
         return repr(self)

@@ -1,17 +1,18 @@
 import random
-from scr.card import Card
-from scr.deck import Deck
+
+from card import Card
+from deck import Deck
 
 card_list = [Card('blue', 2), Card('yellow', 4), Card('red', 7)]
 
 def test_create():
     deck = Deck(cards = card_list)
-    assert deck.cards[0] == card_list
+    assert deck.cards[0] == card_list[0]
 
 
 def test_repr():
     deck = Deck(cards = card_list)
-    assert repr(deck) = 'b2 y4 r7'
+    assert repr(deck) == 'b2 y4 r7'
 
 def test_load():
     deck = Deck.load('b2 y4 r7')
@@ -21,8 +22,8 @@ def test_load():
 def test_draw_card():
     deck = Deck(cards = card_list)
     c = deck.draw_card()
-    assert str(c) == 'y4'
-    assert str(deck) == 'b2 r7'
+    assert str(c) == 'b2'
+    assert str(deck) == 'y4 r7'
 
 def test_shuffle():
     random.seed(7)
